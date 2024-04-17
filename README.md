@@ -26,7 +26,7 @@
 
 ## 🖼️ Captura de Tela
 
-![Interface do Relógio Digital](https://raw.githubusercontent.com/gabrielcpolitano/RelogioDigital/main/relogio.png) <!-- Substitua com o link real da imagem -->
+![Interface do Relógio Digital](https://raw.githubusercontent.com/gabrielcpolitano/Relogio/main/relogio.png) <!-- Substitua com o link real da imagem -->
 
 ## 🏠 Executando Localmente
 
