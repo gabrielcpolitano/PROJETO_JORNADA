@@ -24,9 +24,9 @@
 - `CSS`
 - `JavaScript`
 
-## 🖼️ Captura de Tela
+## 📲 Interface
 
-![Interface do Relógio Digital](https://raw.githubusercontent.com/gabrielcpolitano/Relogio/main/relogio.png) <!-- Substitua com o link real da imagem -->
+<img src="https://raw.githubusercontent.com/gabrielcpolitano/Relogio/main/relogio.png" width="430" height="364">
 
 ## 🏠 Executando Localmente
 
