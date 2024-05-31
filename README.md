@@ -1,7 +1,7 @@
 
 # Relógio Digital 🕒
 
-**Relógio Digital** é uma aplicação web que oferece um relógio digital prático para você visualizar a hora atual diretamente em seu navegador.
+**Relógio Digital** é uma aplicação web que oferece um relógio digital prático para você visualizar a hora atual diretamente em seu navegador. 
 
 ## 📚 Tabela de Conteúdos
 
