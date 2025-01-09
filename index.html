@@ -78,7 +78,7 @@
         <div class="stats">
             <div class="stat">💡 Inteligência: <span id="intelligence">1</span></div>
             <div class="stat">🎯 Foco: <span id="focus">1</span></div>
-            <div class="stat">📋 Organização: <span id="organization">1</span></div>
+            <div class="stat">😊 Satisfação: <span id="satisfaction">1</span></div>
             <div class="stat">💰 Dinheiro: R$<span id="money">0</span></div>
         </div>
 
@@ -96,7 +96,7 @@
         let stats = {
             intelligence: 1,
             focus: 1,
-            organization: 1,
+            satisfaction: 1,
             money: 0
         };
 
@@ -115,7 +115,7 @@
         function updateStats() {
             document.getElementById('intelligence').textContent = stats.intelligence;
             document.getElementById('focus').textContent = stats.focus;
-            document.getElementById('organization').textContent = stats.organization;
+            document.getElementById('satisfaction').textContent = stats.satisfaction;
             document.getElementById('money').textContent = stats.money;
             saveGame();
         }
@@ -132,7 +132,7 @@
         function study(language) {
             stats.intelligence += 1;
             stats.focus += 0.5;
-            stats.organization += 1.5;
+            stats.satisfaction += 1.5;
             stats.money += 2;
             logAction(`📖 Gabriel estudou ${language} e ganhou R$2, além de melhorar suas habilidades!`);
             updateStats();
@@ -156,7 +156,7 @@
           stats = {
               intelligence: 0,
               focus: 0,
-              organization: 0,
+              satisfaction: 0,
               money: 0
           };
           localStorage.removeItem('gabrielStats');
