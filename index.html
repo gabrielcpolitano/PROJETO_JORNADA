@@ -1,18 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/android-chrome-512x512.png">
-    <title>Clock</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Jornada</title>
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.o7BzQfFVNNgQyra4qZ5WMAHaHa&w=200&h=200&c=7" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .stat {
+            font-size: 18px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .log {
+            margin-top: 20px;
+            height: 150px;
+            overflow-y: auto;
+            background: #fafafa;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .log-entry {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <div id="clock-container">
-        <div id="clock">00:00:00</div>
+    <div class="container">
+        <h1>A Jornada de Gabriel</h1>
+        <div class="stats">
+            <div class="stat">💡 Inteligência: <span id="intelligence">1</span></div>
+            <div class="stat">🎯 Foco: <span id="focus">1</span></div>
+            <div class="stat">📋 Organização: <span id="organization">1</span></div>
+            <div class="stat">💰 Dinheiro: R$<span id="money">0</span></div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="studyPython()">🐍 Python</button>
+            <button onclick="studyC()">📘 C</button>
+            <button onclick="studyJavaScript()">🌐 JavaScript</button>
+            <button onclick="resetGame()">🔄 Resetar</button>
+        </div>
+
+        <div class="log" id="log"></div>
     </div>
-    <script src="scripty.js"></script>
+
+    <script>
+        let stats = {
+            intelligence: 1,
+            focus: 1,
+            organization: 1,
+            money: 0
+        };
+
+        function loadGame() {
+            const savedStats = localStorage.getItem('gabrielStats');
+            if (savedStats) {
+                stats = JSON.parse(savedStats);
+            }
+            updateStats();
+        }
+
+        function saveGame() {
+            localStorage.setItem('gabrielStats', JSON.stringify(stats));
+        }
+
+        function updateStats() {
+            document.getElementById('intelligence').textContent = stats.intelligence;
+            document.getElementById('focus').textContent = stats.focus;
+            document.getElementById('organization').textContent = stats.organization;
+            document.getElementById('money').textContent = stats.money;
+            saveGame();
+        }
+
+        function logAction(action) {
+            const log = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = 'log-entry';
+            entry.textContent = action;
+            log.appendChild(entry);
+            log.scrollTop = log.scrollHeight;
+        }
+
+        function study(language) {
+            stats.intelligence += 1;
+            stats.focus += 0.5;
+            stats.organization += 1.5;
+            stats.money += 2;
+            logAction(`📖 Gabriel estudou ${language} e ganhou R$2, além de melhorar suas habilidades!`);
+            updateStats();
+        }
+
+        function studyPython() {
+            study('Python');
+        }
+
+        function studyC() {
+            study('C');
+        }
+
+        function studyJavaScript() {
+            study('JavaScript');
+        }
+
+        function resetGame() {
+            stats = {
+                intelligence: 0,
+                focus: 0,
+                organization: 0,
+                money: 0
+            };
+            localStorage.removeItem('gabrielStats');
+            logAction('🔄 O jogo foi resetado.');
+            updateStats();
+        }
+
+        loadGame();
+    </script>
 </body>
 </html>
