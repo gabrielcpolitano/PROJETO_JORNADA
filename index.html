@@ -151,16 +151,19 @@
         }
 
         function resetGame() {
-            stats = {
-                intelligence: 0,
-                focus: 0,
-                organization: 0,
-                money: 0
-            };
-            localStorage.removeItem('gabrielStats');
-            logAction('🔄 O jogo foi resetado.');
-            updateStats();
+         const confirmation = confirm("Você tem certeza de que deseja resetar o jogo?");
+         if (confirmation) {
+          stats = {
+              intelligence: 0,
+              focus: 0,
+              organization: 0,
+              money: 0
+          };
+          localStorage.removeItem('gabrielStats');
+          logAction('🔄 O jogo foi resetado.');
+          updateStats();
         }
+}
 
         loadGame();
     </script>
