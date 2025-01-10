@@ -123,10 +123,10 @@
     <div class="container">
         <h1>META R$1.400 </h1>
         <div class="stats">
-            <div class="stat">💡Inteligência<br><span id="intelligence">1</span></div>
-            <div class="stat">🎯Foco<br><span id="focus">1</span></div>
-            <div class="stat">😊Satisfação<br><span id="satisfaction">1</span></div>
-            <div class="stat">💰Dinheiro<br>R$<span id="money">0</span></div>
+            <div class="stat">💡Inteligência<br><span id="intelligence">0</span></div>
+            <div class="stat">🧠Lógica<br><span id="logic">0</span></div>
+            <div class="stat">😊Emocional<br><span id="emotional">0</span></div>
+            <div class="stat">💰Valor<br>R$<span id="value">0</span></div>
         </div>
 
         <div class="buttons">
@@ -142,9 +142,9 @@
     <script>
         let stats = {
             intelligence: 1,
-            focus: 1,
-            satisfaction: 1,
-            money: 0
+            logic: 1,
+            emotional: 1,
+            value: 0
         };
 
         function loadGame() {
@@ -161,9 +161,9 @@
 
         function updateStats() {
             document.getElementById('intelligence').textContent = stats.intelligence;
-            document.getElementById('focus').textContent = stats.focus;
-            document.getElementById('satisfaction').textContent = stats.satisfaction;
-            document.getElementById('money').textContent = stats.money;
+            document.getElementById('logic').textContent = stats.logic;
+            document.getElementById('emotional').textContent = stats.emotional;
+            document.getElementById('value').textContent = stats.value;
             saveGame();
         }
 
@@ -180,9 +180,9 @@
 
         function study(language) {
             stats.intelligence += 1;
-            stats.focus += 0.5;
-            stats.satisfaction += 1.5;
-            stats.money += 2;
+            stats.logic += 0.5;
+            stats.emotional += 1.5;
+            stats.value += 2;
             logAction(`📖 Você estudou ${language} e ganhou R$2, além de melhorar suas habilidades!`);
             updateStats();
         }
@@ -204,9 +204,9 @@
             if (confirmation) {
                 stats = {
                     intelligence: 0,
-                    focus: 0,
-                    satisfaction: 0,
-                    money: 0
+                    logic: 0,
+                    emotional: 0,
+                    value: 0
                 };
                 localStorage.removeItem('gabrielStats');
                 logAction('🔄 O jogo foi resetado.');
