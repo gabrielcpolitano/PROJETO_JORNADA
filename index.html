@@ -38,11 +38,11 @@
         </div>
 
         <div class="flex flex-wrap gap-2 justify-center mb-6">
-            <button onclick="studyPython()" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">🐍 Python</button>
-            <button onclick="studyC()" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">📘 C</button>
-            <button onclick="studyJavaScript()" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">🌐 JavaScript</button>
-            <button onclick="resetGame()" class="flex-1 max-w-[160px] bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">🔄 Resetar</button>
-            <button onclick="showMessage()" class="flex-1 max-w-[160px] bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-600">📩 Mensagem</button>
+            <button onclick="studyPython(); this.blur();" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">🐍 Python</button>
+            <button onclick="studyC(); this.blur();" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">📘 C</button>
+            <button onclick="studyJavaScript(); this.blur();" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">🌐 JavaScript</button>
+            <button onclick="resetGame(); this.blur();" class="flex-1 max-w-[160px] bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">🔄 Resetar</button>
+            <button onclick="showMessage(); this.blur();" class="flex-1 max-w-[160px] bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-600">💬 Mensagem</button>
         </div>
 
         <div id="log" class="bg-gray-50 h-40 overflow-y-auto border border-gray-300 rounded-md p-3 text-left text-sm shadow-inner"></div>
@@ -56,15 +56,14 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div id="messageModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-        <div class="bg-white w-full max-w-lg p-6 rounded-lg shadow-lg text-left">
-            <h2 class="text-xl font-bold mb-4">Mensagem</h2>
-            <p class="text-sm text-gray-700">
-                O principal desafio nos estudos é a tendência de se iniciar de forma muito abrupta. Muitos tentam começar com 3 ou 4 horas diárias, o que é fácil inicialmente, pois a carga é leve – como correr ladeira abaixo. Nas primeiras semanas, a motivação é alta e a produtividade flui. Contudo, à medida que os dias passam, a energia e o entusiasmo diminuem. Pessoas sem uma base sólida, cuja força mental ainda não está desenvolvida, dependem muito da motivação. Ao esgotá-la, desistem facilmente. O erro, portanto, reside em começar com muita intensidade.<br><br>
-                A solução é a gradualidade. É fundamental estabelecer metas mensais, pequenas e alcançáveis, como uma hora diária – 30 horas em janeiro, por exemplo. Em fevereiro, aumente para duas horas (60 horas no mês) e, em março, para três horas (90 horas). A ideia é aumentar gradualmente a carga horária, como em uma academia: fortalecer a musculatura aos poucos. A falta de sucesso não se deve à incapacidade, mas à falta de paciência e planejamento estratégico.
-            </p>
-            <button onclick="closeMessage()" class="mt-4 bg-blue-800 text-white py-2 px-4 rounded-md hover:bg-blue-600">Fechar</button>
+    <div id="messageModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg text-left">
+            <h2 class="text-xl font-bold mb-4">Mensagem Motivacional</h2>
+            <p class="text-sm text-gray-800 mb-4">O principal desafio nos estudos é a tendência de se iniciar de forma muito abrupta. Muitos tentam começar com 3 ou 4 horas diárias, o que é fácil inicialmente, pois a carga é leve – como correr ladeira abaixo. Nas primeiras semanas, a motivação é alta e a produtividade flui. Contudo, à medida que os dias passam, a energia e o entusiasmo diminuem. Pessoas sem uma base sólida, cuja força mental ainda não está desenvolvida, dependem muito da motivação. Ao esgotá-la, desistem facilmente. O erro, portanto, reside em começar com muita intensidade.</p>
+            <p class="text-sm text-gray-800">A solução é a gradualidade. É fundamental estabelecer metas mensais, pequenas e alcançáveis, como uma hora diária – 30 horas em janeiro, por exemplo. Em fevereiro, aumente para duas horas (60 horas no mês) e, em março, para três horas (90 horas). A ideia é aumentar gradualmente a carga horária, como em uma academia: fortalecer a musculatura aos poucos. A falta de sucesso não se deve à incapacidade, mas à falta de paciência e planejamento estratégico.</p>
+            <div class="text-right mt-4">
+                <button onclick="closeMessage(); this.blur();" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">Fechar</button>
+            </div>
         </div>
     </div>
 
