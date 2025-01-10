@@ -171,10 +171,12 @@
             const log = document.getElementById('log');
             const entry = document.createElement('div');
             entry.className = 'log-entry';
-            entry.textContent = action;
+            const currentTime = new Date().toLocaleTimeString(); // Obtém a hora atual formatada
+            entry.textContent = `[${currentTime}] ${action}`; // Adiciona a hora antes da mensagem
             log.appendChild(entry);
             log.scrollTop = log.scrollHeight;
         }
+
 
         function study(language) {
             stats.intelligence += 1;
