@@ -5,166 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Jornada</title>
     <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.o7BzQfFVNNgQyra4qZ5WMAHaHa&w=200&h=200&c=7" type="image/png">
-    <style>
-        :root {
-            --primary-color: #4CAF50;
-            --secondary-color: #FFFFFF;
-            --accent-color: #f4f4f4;
-            --text-color: #333;
-            --shadow-color: rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--accent-color);
-            color: var(--text-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            background: var(--secondary-color);
-            border-radius: 15px;
-            box-shadow: 0 4px 10px var(--shadow-color);
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
-        .subtitle {
-            font-size: 16px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            color: var(--text-color);
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .stat {
-            font-size: 16px;
-            background: var(--accent-color);
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px var(--shadow-color);
-        }
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        button {
-            flex: 1 1 calc(50% - 10px);
-            max-width: 160px;
-            padding: 10px;
-            font-size: 16px;
-            background: var(--primary-color);
-            color: var(--secondary-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .log {
-            margin-top: 20px;
-            height: 150px;
-            overflow-y: auto;
-            background: var(--accent-color);
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 10px;
-            text-align: left;
-            font-size: 14px;
-            box-shadow: inset 0 2px 5px var(--shadow-color);
-        }
-
-        .log-entry {
-            margin: 5px 0;
-        }
-
-        .goals {
-            margin-top: 20px;
-            padding: 15px;
-            background: var(--accent-color);
-            border-radius: 10px;
-            box-shadow: 0 2px 5px var(--shadow-color);
-        }
-
-        .goal {
-            font-size: 14px;
-            margin-bottom: 10px;
-            text-align: left;
-        }
-
-        @media (max-width: 400px) {
-            .stat {
-                font-size: 14px;
-            }
-
-            button {
-                font-size: 14px;
-            }
-
-            .log, .goal {
-                font-size: 12px;
-            }
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Conhecimento é Poder </h1>
-        <div class="subtitle">"Vença as Metas"</div>
-        <div class="stats">
-            <div class="stat">💡Inteligência<br><span id="intelligence">0</span></div>
-            <div class="stat">🧠Lógica<br><span id="logic">0</span></div>
-            <div class="stat">😊Emocional<br><span id="emotional">0</span></div>
-            <div class="stat">⏳Horas de Estudo<br><span id="studyTime">0h 0m</span></div>
+<body class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-5">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-6 text-center">
+        <h1 class="text-2xl font-bold text-green-500 mb-4">Pouco hoje muito Amanhã</h1>
+        <p class="text-sm font-semibold text-gray-600 mb-2">"O sucesso vem de gota em gota"</p>
+        <p class="text-sm font-semibold text-gray-600 mb-2">"O sucesso vem de fazer o pouco todo dia"</p>
+        <p class="text-sm font-semibold text-gray-600 mb-6">"Grandes resultados são moldados na constância"</p>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
+                💡 <span class="font-bold text-lg">Inteligência</span>
+                <br>
+                <span id="intelligence" class="text-xl font-bold">0</span>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
+                🧠 <span class="font-bold text-lg">Lógica</span>
+                <br>
+                <span id="logic" class="text-xl font-bold">0</span>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
+                😊 <span class="font-bold text-lg">Emocional</span>
+                <br>
+                <span id="emotional" class="text-xl font-bold">0</span>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
+                ⏳ <span class="font-bold text-lg">Horas de Estudo</span>
+                <br>
+                <span id="studyTime" class="text-xl font-bold">0h 0m</span>
+            </div>
         </div>
 
-        <div class="buttons">
-            <button onclick="studyPython()">🐍 Python</button>
-            <button onclick="studyC()">📘 C</button>
-            <button onclick="studyJavaScript()">🌐 JavaScript</button>
-            <button onclick="resetGame()">🔄 Resetar</button>
+        <div class="flex flex-wrap gap-2 justify-center mb-6">
+            <button onclick="studyPython()" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">🐍 Python</button>
+            <button onclick="studyC()" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">📘 C</button>
+            <button onclick="studyJavaScript()" class="flex-1 max-w-[160px] bg-green-800 text-white py-2 px-4 rounded-md hover:bg-green-600">🌐 JavaScript</button>
+            <button onclick="resetGame()" class="flex-1 max-w-[160px] bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">🔄 Resetar</button>
         </div>
 
-        <div class="log" id="log"></div>
+        <div id="log" class="bg-gray-50 h-40 overflow-y-auto border border-gray-300 rounded-md p-3 text-left text-sm shadow-inner"></div>
 
-        <div class="goals">
-            <div class="goal">📅 Janeiro: 30 horas de estudos</div>
-            <div class="goal">📅 Fevereiro: 90 horas de estudos</div>
-            <div class="goal">📅 Março: 180 horas de estudos</div>
-            <div class="goal">📅 Abril: 300 horas de estudos</div>
+        <div class="mt-6 bg-gray-50 p-4 rounded-lg shadow text-left">
+            <p class="font-semibold mb-2">📅 Objetivos:</p>
+            <p class="text-sm">📅 Janeiro: 30 horas de estudos</p>
+            <p class="text-sm">📅 Fevereiro: 90 horas de estudos</p>
+            <p class="text-sm">📅 Março: 180 horas de estudos</p>
+            <p class="text-sm">📅 Abril: 300 horas de estudos</p>
         </div>
     </div>
 
@@ -202,8 +89,8 @@
             const log = document.getElementById('log');
             const entry = document.createElement('div');
             entry.className = 'log-entry';
-            const currentTime = new Date().toLocaleTimeString(); // Obtém a hora atual formatada
-            entry.textContent = `[${currentTime}] ${action}`; // Adiciona a hora antes da mensagem
+            const currentTime = new Date().toLocaleTimeString();
+            entry.textContent = `[${currentTime}] ${action}`;
             log.appendChild(entry);
             log.scrollTop = log.scrollHeight;
         }
@@ -212,7 +99,7 @@
             stats.intelligence += 1;
             stats.logic += 0.5;
             stats.emotional += 1.5;
-            stats.studyMinutes += 10; // Adiciona 10 minutos de estudo
+            stats.studyMinutes += 10;
             logAction(`📖 Você estudou ${language} por 10 minutos e melhorou suas habilidades!`);
             updateStats();
         }
