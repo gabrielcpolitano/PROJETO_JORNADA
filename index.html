@@ -26,9 +26,9 @@
                 <span id="logic" class="text-xl font-bold">0</span>
             </div>
             <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
-                😊 <span class="font-bold text-lg">Emocional</span>
+                😊 <span class="font-bold text-lg">Constância</span>
                 <br>
-                <span id="emotional" class="text-xl font-bold">0</span>
+                <span id="consistency" class="text-xl font-bold">0</span>
             </div>
             <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
                 ⏳ <span class="font-bold text-lg">Horas</span>
@@ -71,7 +71,7 @@
         let stats = {
             intelligence: 1,
             logic: 1,
-            emotional: 1,
+            consistency: 1,
             studyMinutes: 0
         };
 
@@ -90,7 +90,7 @@
         function updateStats() {
             document.getElementById('intelligence').textContent = stats.intelligence;
             document.getElementById('logic').textContent = stats.logic;
-            document.getElementById('emotional').textContent = stats.emotional;
+            document.getElementById('consistency').textContent = stats.consistency;
             const hours = Math.floor(stats.studyMinutes / 60);
             const minutes = stats.studyMinutes % 60;
             document.getElementById('studyTime').textContent = `${hours}h ${minutes}m`;
@@ -110,7 +110,7 @@
         function study(language) {
             stats.intelligence += 1;
             stats.logic += 0.5;
-            stats.emotional += 1.5;
+            stats.consistency += 1.5;
             stats.studyMinutes += 10;
             logAction(`📖 Você estudou ${language} por 10 minutos e melhorou suas habilidades!`);
             updateStats();
@@ -134,7 +134,7 @@
                 stats = {
                     intelligence: 0,
                     logic: 0,
-                    emotional: 0,
+                    consistency: 0,
                     studyMinutes: 0
                 };
                 localStorage.removeItem('gabrielStats');
