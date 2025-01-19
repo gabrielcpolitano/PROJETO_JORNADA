@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Jornada</title>
-    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.o7BzQfFVNNgQyra4qZ5WMAHaHa&w=200&h=200&c=7" type="image/png">
+    <link rel="icon" href="https://tse3.mm.bing.net/th?id=OIP.o7BzQfFVNNgQyra4qZ5WMAHaHa&w=200&h=200&c=7"
+        type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-800 flex items-center justify-center min-h-screen p-5">
     <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-6 text-center">
         <h1 class="text-2xl font-bold text-green-500 mb-4">Pouco hoje muito Amanhã</h1>
         <p class="text-sm font-semibold text-gray-600 mb-2">"O sucesso vem de gota em gota"</p>
         <p class="text-sm font-semibold text-gray-600 mb-2">"Grandes resultados são moldados na constância"</p>
-        <p class="text-sm font-semibold text-gray-600 mb-6">"Fazer exacerbadamente o que gostamos, sem que seja na evolução gradativa, afasta até os corajosos"</p>
-
+        <p class="text-sm font-semibold text-gray-600 mb-6">"Fazer exacerbadamente o que gostamos, sem que seja na
+            evolução gradativa, afasta até os corajosos"</p>
         <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
-                💡 <span class="font-bold text-lg">Inteligência</span>
-                <br>
-                <span id="intelligence" class="text-xl font-bold">0</span>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
-                🧠 <span class="font-bold text-lg">Lógica</span>
-                <br>
-                <span id="logic" class="text-xl font-bold">0</span>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
-                😊 <span class="font-bold text-lg">Constância</span>
-                <br>
-                <span id="consistency" class="text-xl font-bold">0</span>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg shadow text-center">
-                ⏳ <span class="font-bold text-lg">Horas</span>
-                <br>
-                <span id="studyTime" class="text-xl font-bold">0h 0m</span>
-            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center"> 💡 <span
+                    class="font-bold text-lg">Inteligência</span> <br> <span id="intelligence"
+                    class="text-xl font-bold">0</span> </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center"> 🧠 <span class="font-bold text-lg">Lógica</span>
+                <br> <span id="logic" class="text-xl font-bold">0</span> </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center"> 😊 <span
+                    class="font-bold text-lg">Constância</span> <br> <span id="consistency"
+                    class="text-xl font-bold">0</span> </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow text-center"> ⏳ <span class="font-bold text-lg">Horas</span>
+                <br> <span id="studyTime" class="text-xl font-bold">0h 0m</span> </div>
         </div>
-
-        <div class="flex flex-wrap gap-2 justify-center mb-6">
-            <button onclick="studyFIAP(); this.blur();" class="flex-1 max-w-[160px] bg-gradient-to-r from-green-700 to-green-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400">🏫 FIAP</button>
-            <button onclick="studyMath(); this.blur();" class="flex-1 max-w-[160px] bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">📘 Matemática</button>
-            <button onclick="studyEnglish(); this.blur();" class="flex-1 max-w-[160px] bg-gradient-to-r from-purple-700 to-purple-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-400">📚 Inglês</button>
-            <button onclick="resetGame(); this.blur();" class="flex-1 max-w-[160px] bg-gradient-to-r from-gray-700 to-gray-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">🔄 Resetar</button>
-            <button onclick="showMessage(); this.blur();" class="flex-1 max-w-[160px] bg-gradient-to-r from-indigo-700 to-indigo-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400">💬 Mensagem</button>
+        <div class="flex flex-wrap gap-2 justify-center mb-6"> <button onclick="studyFIAP(); this.blur();"
+                class="flex-1 max-w-[160px] bg-gradient-to-r from-green-700 to-green-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-green-400">🏫
+                FIAP</button> <button onclick="studyProgramming(); this.blur();"
+                class="flex-1 max-w-[160px] bg-gradient-to-r from-blue-700 to-blue-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">💻
+                Programação</button> <button onclick="studyEnglish(); this.blur();"
+                class="flex-1 max-w-[160px] bg-gradient-to-r from-purple-700 to-purple-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-purple-400">📚
+                Inglês</button> <button onclick="resetGame(); this.blur();"
+                class="flex-1 max-w-[160px] bg-gradient-to-r from-gray-700 to-gray-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-gray-400">🔄
+                Resetar</button> <button onclick="showMessage(); this.blur();"
+                class="flex-1 max-w-[160px] bg-gradient-to-r from-indigo-700 to-indigo-500 text-white py-3 px-5 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400">💬
+                Mensagem</button> </div>
+        <div id="log"
+            class="bg-gray-50 h-40 overflow-y-auto border border-gray-300 rounded-md p-3 text-left text-sm shadow-inner">
         </div>
-
-        <div id="log" class="bg-gray-50 h-40 overflow-y-auto border border-gray-300 rounded-md p-3 text-left text-sm shadow-inner"></div>
-
         <div class="mt-6 bg-gray-50 p-4 rounded-lg shadow text-left">
             <p class="font-semibold mb-2">📅 Objetivos:</p>
             <p class="text-sm">📅 Janeiro: 30 horas de estudos</p>
@@ -55,109 +51,28 @@
             <p class="text-sm">📅 Abril: 300 horas de estudos</p>
         </div>
     </div>
-
     <div id="messageModal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
         <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg text-left">
             <h2 class="text-xl font-bold mb-4">Mensagem Motivacional</h2>
-            <p class="text-sm text-gray-800 mb-4">O principal desafio nos estudos é a tendência de se iniciar de forma muito abrupta. Muitos tentam começar com 3 ou 4 horas diárias, o que é fácil inicialmente, pois a carga é leve – como correr ladeira abaixo. Nas primeiras semanas, a motivação é alta e a produtividade flui. Contudo, à medida que os dias passam, a energia e o entusiasmo diminuem. Pessoas sem uma base sólida, cuja força mental ainda não está desenvolvida, dependem muito da motivação. Ao esgotá-la, desistem facilmente. O erro, portanto, reside em começar com muita intensidade.</p>
-            <p class="text-sm text-gray-800 mb-4">A solução é a gradualidade. É fundamental estabelecer metas mensais, pequenas e alcançáveis, como uma hora diária – 30 horas em janeiro, por exemplo. Em fevereiro, aumente para duas horas (60 horas no mês) e, em março, para três horas (90 horas). A ideia é aumentar gradualmente a carga horária, como em uma academia: fortalecer a musculatura aos poucos. A falta de sucesso não se deve à incapacidade, mas à falta de paciência e planejamento estratégico.</p>
-
-            <audio controls class="w-full mt-4">
-                <source src="audio.mp3" type="audio/mp3">
-                Seu navegador não suporta o elemento de áudio.
+            <p class="text-sm text-gray-800 mb-4">O principal desafio nos estudos é a tendência de se iniciar de forma
+                muito abrupta. Muitos tentam começar com 3 ou 4 horas diárias, o que é fácil inicialmente, pois a carga
+                é leve – como correr ladeira abaixo. Nas primeiras semanas, a motivação é alta e a produtividade flui.
+                Contudo, à medida que os dias passam, a energia e o entusiasmo diminuem. Pessoas sem uma base sólida,
+                cuja força mental ainda não está desenvolvida, dependem muito da motivação. Ao esgotá-la, desistem
+                facilmente. O erro, portanto, reside em começar com muita intensidade.</p>
+            <p class="text-sm text-gray-800 mb-4">A solução é a gradualidade. É fundamental estabelecer metas mensais,
+                pequenas e alcançáveis, como uma hora diária – 30 horas em janeiro, por exemplo. Em fevereiro, aumente
+                para duas horas (60 horas no mês) e, em março, para três horas (90 horas). A ideia é aumentar
+                gradualmente a carga horária, como em uma academia: fortalecer a musculatura aos poucos. A falta de
+                sucesso não se deve à incapacidade, mas à falta de paciência e planejamento estratégico.</p> <audio
+                controls class="w-full mt-4">
+                <source src="audio.mp3" type="audio/mp3"> Seu navegador não suporta o elemento de áudio.
             </audio>
-
-            <div class="text-right mt-4">
-                <button onclick="closeMessage(); this.blur();" class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">Fechar</button>
-            </div>
+            <div class="text-right mt-4"> <button onclick="closeMessage(); this.blur();"
+                    class="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-600">Fechar</button> </div>
         </div>
     </div>
-
-    <script>
-        let stats = {
-            intelligence: 1,
-            logic: 1,
-            consistency: 1,
-            studyMinutes: 0
-        };
-
-        function loadGame() {
-            const savedStats = localStorage.getItem('gabrielStats');
-            if (savedStats) {
-                stats = JSON.parse(savedStats);
-            }
-            updateStats();
-        }
-
-        function saveGame() {
-            localStorage.setItem('gabrielStats', JSON.stringify(stats));
-        }
-
-        function updateStats() {
-            document.getElementById('intelligence').textContent = stats.intelligence;
-            document.getElementById('logic').textContent = stats.logic;
-            document.getElementById('consistency').textContent = stats.consistency;
-            const hours = Math.floor(stats.studyMinutes / 60);
-            const minutes = stats.studyMinutes % 60;
-            document.getElementById('studyTime').textContent = `${hours}h ${minutes}m`;
-            saveGame();
-        }
-
-        function logAction(action) {
-            const log = document.getElementById('log');
-            const entry = document.createElement('div');
-            entry.className = 'log-entry';
-            const currentTime = new Date().toLocaleTimeString();
-            entry.textContent = `[${currentTime}] ${action}`;
-            log.appendChild(entry);
-            log.scrollTop = log.scrollHeight;
-        }
-
-        function study(language) {
-            stats.intelligence += 1;
-            stats.logic += 0.5;
-            stats.consistency += 1.5;
-            stats.studyMinutes += 10;
-            logAction(`📖 Você estudou ${language} por 10 minutos e melhorou suas habilidades!`);
-            updateStats();
-        }
-
-        function studyFIAP() {
-            study('FIAP');
-        }
-
-        function studyMath() {
-            study('Matemática');
-        }
-
-        function studyEnglish() {
-            study('Inglês');
-        }
-
-        function resetGame() {
-            const confirmation = confirm("Você tem certeza de que deseja resetar o jogo?");
-            if (confirmation) {
-                stats = {
-                    intelligence: 0,
-                    logic: 0,
-                    consistency: 0,
-                    studyMinutes: 0
-                };
-                localStorage.removeItem('gabrielStats');
-                logAction('🔄 O jogo foi resetado.');
-                updateStats();
-            }
-        }
-
-        function showMessage() {
-            document.getElementById('messageModal').classList.remove('hidden');
-        }
-
-        function closeMessage() {
-            document.getElementById('messageModal').classList.add('hidden');
-        }
-
-        loadGame();
-    </script>
+    <script>         let stats = { intelligence: 1, logic: 1, consistency: 1, studyMinutes: 0 }; function loadGame() { const savedStats = localStorage.getItem('gabrielStats'); if (savedStats) { stats = JSON.parse(savedStats); } updateStats(); } function saveGame() { localStorage.setItem('gabrielStats', JSON.stringify(stats)); } function updateStats() { document.getElementById('intelligence').textContent = stats.intelligence; document.getElementById('logic').textContent = stats.logic; document.getElementById('consistency').textContent = stats.consistency; const hours = Math.floor(stats.studyMinutes / 60); const minutes = stats.studyMinutes % 60; document.getElementById('studyTime').textContent = `${hours}h ${minutes}m`; saveGame(); } function logAction(action) { const log = document.getElementById('log'); const entry = document.createElement('div'); entry.className = 'log-entry'; const currentTime = new Date().toLocaleTimeString(); entry.textContent = `[${currentTime}] ${action}`; log.appendChild(entry); log.scrollTop = log.scrollHeight; } function study(language) { stats.intelligence += 1; stats.logic += 0.5; stats.consistency += 1.5; stats.studyMinutes += 10; logAction(`📖 Você estudou ${language} por 10 minutos e melhorou suas habilidades!`); updateStats(); } function studyFIAP() { study('FIAP'); } function studyProgramming() { study('Programação'); } function studyEnglish() { study('Inglês'); } function resetGame() { const confirmation = confirm("Você tem certeza de que deseja resetar o jogo?"); if (confirmation) { stats = { intelligence: 0, logic: 0, consistency: 0, studyMinutes: 0 }; localStorage.removeItem('gabrielStats'); logAction('🔄 O jogo foi resetado.'); updateStats(); } } function showMessage() { document.getElementById('messageModal').classList.remove('hidden'); } function closeMessage() { document.getElementById('messageModal').classList.add('hidden'); } loadGame();     </script>
 </body>
+
 </html>
